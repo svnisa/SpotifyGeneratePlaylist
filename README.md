@@ -4,7 +4,7 @@ A simple script that take your liked videos on Youtube, and generates a Spotify 
 ## Table of Contents
 * [Technologies](#Technologies)
 * [Setup](#LocalSetup)
-* [Youtube Video](#Youtube Video)
+* [Video](#Video)
 * [ToDo](#ToDo)
 
 ## Technologies
@@ -32,7 +32,7 @@ If you are having issues check this out [Oauth Setup 2] and this one too [Oauth 
 you'll immediately see `Please visit this URL to authorize this application: <some long url>`
 click on it and log into your Google Account to collect the `authorization code`
 
-## Youtube Video
+## Video
 Check out the youtube video about this project
 [Youtube Video]
 
