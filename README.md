@@ -48,5 +48,5 @@ Check out the youtube video about this project
    [Set Up Youtube Oauth]: <https://developers.google.com/youtube/v3/getting-started/>
    [Oauth Setup 2]:<https://stackoverflow.com/questions/11485271/google-oauth-2-authorization-error-redirect-uri-mismatch/>
    [Youtube Video]:<https://www.youtube.com/watch?v=7J_qcttfnJA/>
-   [youtube_dl]:<https://github.com/ytdl-org/youtube-dl/>
+   [Youtube_dl v 2020.01.24]:<https://github.com/ytdl-org/youtube-dl/>
    [Oauth Setup 3]:<https://github.com/googleapis/google-api-python-client/blob/master/docs/client-secrets.md/>
