@@ -6,6 +6,7 @@ A simple script that takes your liked videos on Youtube, and generates a Spotify
 * [Technologies](#Technologies)
 * [Setup](#LocalSetup)
 * [ToDo](#ToDo)
+* [Troubleshooting](#Troubleshooting)
 
 ## Video
 Check out the youtube video for a step by step walk through 
@@ -42,7 +43,7 @@ Check out the youtube video for a step by step walk through
 * Add Error Handling
 
 ## Troubleshooting
-* Sprtify Oauth token expires very quickly, If you come across a `KeyError` this could
+* Spotify Oauth token expires very quickly, If you come across a `KeyError` this could
 be caused by an expired token. So just refer back to step 3 in local setup, and generate a new
 token!  
 
