@@ -2,15 +2,16 @@
 A simple script that take your liked videos on Youtube, and generates a Spotify playlist based on the song in your liked videos.
 
 ## Table of Contents
-* [Technologies](#technologies)
-* [Setup](#setup)
-* [Youtube](#video)
+* [Technologies](#Technologies)
+* [Setup](#LocalSetup)
+* [Youtube Video](#Youtube Video)
 * [ToDo](#ToDo)
 
 ## Technologies
 * [Youtube Data API v3]
 * [Spotify Web API]
 * [Requests Library v 2.22.0]
+* [Youtube_dl v 2020.01.24]
 
 ## LocalSetup
 1) Install All Dependencies   
@@ -22,11 +23,18 @@ A simple script that take your liked videos on Youtube, and generates a Spotify 
     * To Collect your Oauth Token, Visit this url here: [Get Oauth] and click the **Get Token** button, just like its displayed in the image below
     ![alt text](images/spotify_token.png)
 
-3) Enable Oauth For Youtube and add you client id into client_secrets.py file   
-Ok this part is tricky but its worth it! Just follow the guide here [Set Up Youtube Oauth]
+3) Enable Oauth For Youtube and and download the client_secrets.json 
+Ok this part is tricky but its worth it! Just follow the guide here [Set Up Youtube Oauth] ! 
+If you are having issues check this out [Oauth Setup 2] and this one too [Oauth Setup 3] 
 
 4) Run the File  
 `python3 create_playlist.py`
+you'll immediately see `Please visit this URL to authorize this application: <some long url>`
+click on it and log into your Google Account to collect the `authorization code`
+
+## Youtube Video
+Check out the youtube video about this project
+[Youtube Video]
 
 ## ToDo
 * Unit Test File
@@ -38,3 +46,7 @@ Ok this part is tricky but its worth it! Just follow the guide here [Set Up Yout
    [Account Overview]: <https://www.spotify.com/us/account/overview/>
    [Get Oauth]: <https://developer.spotify.com/console/post-playlists/>
    [Set Up Youtube Oauth]: <https://developers.google.com/youtube/v3/getting-started/>
+   [Oauth Setup 2]:<https://stackoverflow.com/questions/11485271/google-oauth-2-authorization-error-redirect-uri-mismatch/>
+   [Youtube Video]:<https://www.youtube.com/watch?v=7J_qcttfnJA/>
+   [youtube_dl]:<https://github.com/ytdl-org/youtube-dl/>
+   [Oauth Setup 3]:<https://github.com/googleapis/google-api-python-client/blob/master/docs/client-secrets.md/>
