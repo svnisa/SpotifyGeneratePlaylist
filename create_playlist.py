@@ -36,7 +36,7 @@ class CreatePlaylist:
         return youtube_client
 
     def get_liked_videos(self):
-        """Grab Our Liked Videos & Creating A Dictionary Of Important Song Information"""
+        """Grab Our Liked Videos & Create A Dictionary Of Important Song Information"""
         request = self.youtube_client.videos().list(
             part="snippet,contentDetails,statistics",
             myRating="like"
@@ -53,16 +53,17 @@ class CreatePlaylist:
             song_name = video["track"]
             artist = video["artist"]
 
-            # save all important info
-            self.all_song_info[video_title]={
-                "youtube_url": youtube_url,
-                "song_name": song_name,
-                "artist": artist,
+            if song_name is not None and artist is not None:
+                # save all important info and skip any missing song and artist
+                self.all_song_info[video_title] = {
+                    "youtube_url": youtube_url,
+                    "song_name": song_name,
+                    "artist": artist,
 
-                # add the uri, easy to get song to put into playlist
-                "spotify_uri":self.get_spotify_uri(song_name,artist)
+                    # add the uri, easy to get song to put into playlist
+                    "spotify_uri":self.get_spotify_uri(song_name,artist)
 
-            }
+                }
 
     def create_playlist(self):
         """Create A New Playlist"""
@@ -108,7 +109,7 @@ class CreatePlaylist:
         return uri
 
     def add_song_to_playlist(self):
-        """Add this song into the new Spotify playlist"""
+        """Add all liked songs into a new Spotify playlist"""
         # populate dictionary with our liked songs
         self.get_liked_videos()
 

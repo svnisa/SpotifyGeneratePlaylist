@@ -2,10 +2,14 @@
 A simple script that takes your liked videos on Youtube, and generates a Spotify playlist based on the song in your liked videos.
 
 ## Table of Contents
+* [Video](#Video)
 * [Technologies](#Technologies)
 * [Setup](#LocalSetup)
-* [Video](#Video)
 * [ToDo](#ToDo)
+
+## Video
+Check out the youtube video for a step by step walk through 
+[Youtube Video]
 
 ## Technologies
 * [Youtube Data API v3]
@@ -23,7 +27,7 @@ A simple script that takes your liked videos on Youtube, and generates a Spotify
     * To Collect your Oauth Token, Visit this url here: [Get Oauth] and click the **Get Token** button
     ![alt text](images/spotify_token.png)
 
-3) Enable Oauth For Youtube and and download the client_secrets.json   
+3) Enable Oauth For Youtube and download the client_secrets.json   
     * Ok this part is tricky but its worth it! Just follow the guide here [Set Up Youtube Oauth] ! 
     If you are having issues check this out [Oauth Setup 2] and this one too [Oauth Setup 3] 
 
@@ -32,13 +36,16 @@ A simple script that takes your liked videos on Youtube, and generates a Spotify
     * you'll immediately see `Please visit this URL to authorize this application: <some long url>`
     * click on it and log into your Google Account to collect the `authorization code`
 
-## Video
-Check out the youtube video about this project
-[Youtube Video]
 
 ## ToDo
 * Tests
 * Add Error Handling
+
+## Troubleshooting
+* Sprtify Oauth token expires very quickly, If you come across a `KeyError` this could
+be caused by an expired token. So just refer back to step 3 in local setup, and generate a new
+token!  
+
 
    [Youtube Data API v3]: <https://developers.google.com/youtube/v3>
    [Spotify Web API]: <https://developer.spotify.com/documentation/web-api/>
